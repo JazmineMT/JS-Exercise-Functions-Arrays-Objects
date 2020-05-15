@@ -469,4 +469,13 @@ function getGermanCars(data) {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
+function carMaker (odo){
+  return {
+    odometer :odo , 
+    drive: function (dist){
+      this.odometer = this.odometer + dist;
+    }
+  }
+}
 
+console.log(carMaker(300));
